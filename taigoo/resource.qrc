@@ -1,1 +1,10 @@
-<RCC/>
+<RCC>
+    <qresource prefix="/bg">
+        <file>image/bg/title.jpg</file>
+        <file>image/bg/menu.jpg</file>
+        <file>image/bg/music.png</file>
+    </qresource>
+    <qresource prefix="/but">
+        <file>image/button/start.png</file>
+    </qresource>
+</RCC>
