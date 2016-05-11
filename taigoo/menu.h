@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "music1.h"
+#include "requirement.h"
 namespace Ui {
 class menu;
 }
@@ -17,10 +18,13 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-
+    //music 1
+    void on_pushButton_2_clicked();
+    //project requirement
 private:
     Ui::menu *ui;
     Music1 *music1;
+    Requirement *require;
 };
 
 #endif // MENU_H

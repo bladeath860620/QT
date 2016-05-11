@@ -15,15 +15,20 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     menu.cpp \
-    music1.cpp
+    music1.cpp \
+    requirement.cpp \
+    drum.cpp
 
 HEADERS  += mainwindow.h \
     menu.h \
-    music1.h
+    music1.h \
+    requirement.h \
+    drum.h
 
 FORMS    += mainwindow.ui \
     menu.ui \
-    music1.ui
+    music1.ui \
+    requirement.ui
 
 RESOURCES += \
     resource.qrc

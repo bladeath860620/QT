@@ -52,6 +52,23 @@ background-color: rgba(255, 255, 255, 0);</string>
      <string>Music 1</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>270</y>
+      <width>305</width>
+      <height>83</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/but/image/button/start.png);
+background-color: rgba(255, 255, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>Project Requirement</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

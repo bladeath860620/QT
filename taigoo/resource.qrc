@@ -3,8 +3,19 @@
         <file>image/bg/title.jpg</file>
         <file>image/bg/menu.jpg</file>
         <file>image/bg/music.png</file>
+        <file>image/bg/yellow.png</file>
     </qresource>
     <qresource prefix="/but">
         <file>image/button/start.png</file>
+    </qresource>
+    <qresource prefix="/gif">
+        <file>image/gif/miku.gif</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file>image/music/hitbox.png</file>
+        <file>image/music/red_s.png</file>
+        <file>image/music/red_b.png</file>
+        <file>image/music/blue_s.png</file>
+        <file>image/music/blue_b.png</file>
     </qresource>
 </RCC>

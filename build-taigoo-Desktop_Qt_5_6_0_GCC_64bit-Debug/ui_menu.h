@@ -25,6 +25,7 @@ class Ui_menu
 public:
     QWidget *centralwidget;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QMainWindow *menu)
     {
@@ -46,6 +47,11 @@ public:
         pushButton->setGeometry(QRect(360, 110, 305, 83));
         pushButton->setStyleSheet(QLatin1String("background-image: url(:/but/image/button/start.png);\n"
 "background-color: rgba(255, 255, 255, 0);"));
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(360, 270, 305, 83));
+        pushButton_2->setStyleSheet(QLatin1String("background-image: url(:/but/image/button/start.png);\n"
+"background-color: rgba(255, 255, 255, 0);"));
         menu->setCentralWidget(centralwidget);
 
         retranslateUi(menu);
@@ -57,6 +63,7 @@ public:
     {
         menu->setWindowTitle(QApplication::translate("menu", "Menu", 0));
         pushButton->setText(QApplication::translate("menu", "Music 1", 0));
+        pushButton_2->setText(QApplication::translate("menu", "Project Requirement", 0));
     } // retranslateUi
 
 };
