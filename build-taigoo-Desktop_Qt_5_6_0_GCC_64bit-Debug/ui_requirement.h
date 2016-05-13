@@ -30,6 +30,14 @@ public:
     QLabel *label_2;
     QGraphicsView *graphicsView;
     QLCDNumber *lcdNumber;
+    QLCDNumber *lcdNumber_2;
+    QLCDNumber *lcdNumber_3;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_6;
+    QLabel *label_7;
+    QLabel *label_8;
 
     void setupUi(QMainWindow *Requirement)
     {
@@ -56,6 +64,7 @@ public:
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
         graphicsView->setGeometry(QRect(0, 0, 1027, 291));
+        graphicsView->setStyleSheet(QStringLiteral("background-color: rgba(255, 255, 255, 0);"));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         lcdNumber = new QLCDNumber(centralwidget);
@@ -65,11 +74,55 @@ public:
         lcdNumber->setSmallDecimalPoint(false);
         lcdNumber->setSegmentStyle(QLCDNumber::Filled);
         lcdNumber->setProperty("intValue", QVariant(30));
+        lcdNumber_2 = new QLCDNumber(centralwidget);
+        lcdNumber_2->setObjectName(QStringLiteral("lcdNumber_2"));
+        lcdNumber_2->setGeometry(QRect(950, 120, 71, 31));
+        lcdNumber_2->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/yellow.png);"));
+        lcdNumber_3 = new QLCDNumber(centralwidget);
+        lcdNumber_3->setObjectName(QStringLiteral("lcdNumber_3"));
+        lcdNumber_3->setGeometry(QRect(0, 190, 141, 91));
+        lcdNumber_3->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/yellow.png);"));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(830, 120, 121, 31));
+        label_3->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/yellow.png);"));
+        label_3->setFrameShape(QFrame::Box);
+        label_3->setFrameShadow(QFrame::Raised);
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(262, 150, 111, 111));
+        label_4->setStyleSheet(QStringLiteral("background-image: url(:/music/image/music/hitbox.png);"));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(0, 152, 141, 41));
+        label_5->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/yellow.png);"));
+        label_5->setFrameShape(QFrame::Box);
+        label_5->setFrameShadow(QFrame::Raised);
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(150, 165, 101, 61));
+        label_6->setStyleSheet(QStringLiteral("background-image: url(:/music/image/music/good.png);"));
+        label_7 = new QLabel(centralwidget);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(150, 170, 103, 61));
+        label_7->setStyleSheet(QStringLiteral("background-image: url(:/music/image/music/normal.png);"));
+        label_8 = new QLabel(centralwidget);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(150, 170, 103, 51));
+        label_8->setStyleSheet(QStringLiteral("background-image: url(:/music/image/music/bad.png);"));
         Requirement->setCentralWidget(centralwidget);
         label->raise();
         label_2->raise();
         lcdNumber->raise();
         graphicsView->raise();
+        lcdNumber_2->raise();
+        lcdNumber_3->raise();
+        label_3->raise();
+        label_4->raise();
+        label_5->raise();
+        label_6->raise();
+        label_7->raise();
+        label_8->raise();
 
         retranslateUi(Requirement);
 
@@ -81,6 +134,12 @@ public:
         Requirement->setWindowTitle(QApplication::translate("Requirement", "Requirement", 0));
         label->setText(QString());
         label_2->setText(QString());
+        label_3->setText(QApplication::translate("Requirement", "TIME LEFT:", 0));
+        label_4->setText(QString());
+        label_5->setText(QApplication::translate("Requirement", "     SCORE", 0));
+        label_6->setText(QString());
+        label_7->setText(QString());
+        label_8->setText(QString());
     } // retranslateUi
 
 };

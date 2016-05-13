@@ -36,8 +36,7 @@ public:
         MainWindow->setSizePolicy(sizePolicy);
         MainWindow->setMinimumSize(QSize(1024, 768));
         MainWindow->setMaximumSize(QSize(1024, 768));
-        MainWindow->setStyleSheet(QLatin1String("background-image: url(:/bg/image/bg/title.jpg);\n"
-"background-color: rgba(255, 255, 255, 0);"));
+        MainWindow->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/title.jpg);"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         MainWindow->setCentralWidget(centralWidget);

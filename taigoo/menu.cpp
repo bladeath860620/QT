@@ -6,7 +6,6 @@ menu::menu(QWidget *parent) :
     ui(new Ui::menu),
     music1(new Music1),
     require(new Requirement)
-
 {
     ui->setupUi(this);
 }
@@ -20,9 +19,9 @@ menu::~menu()
 
 void menu::on_pushButton_clicked()
 {
-    this->hide();
+    /*this->hide();
     music1->setGeometry(this->x(), this->y(), 1024, 571);
-    music1->show();
+    music1->show();*/
 }
 
 void menu::on_pushButton_2_clicked()
@@ -30,4 +29,5 @@ void menu::on_pushButton_2_clicked()
     this->hide();
     require->setGeometry(this->x(), this->y(), 1024, 571);
     require->show();
+    require->starter();
 }

@@ -4,6 +4,8 @@
         <file>image/bg/menu.jpg</file>
         <file>image/bg/music.png</file>
         <file>image/bg/yellow.png</file>
+        <file>image/bg/result.jpg</file>
+        <file>image/bg/skyblue.jpg</file>
     </qresource>
     <qresource prefix="/but">
         <file>image/button/start.png</file>
@@ -17,5 +19,8 @@
         <file>image/music/red_b.png</file>
         <file>image/music/blue_s.png</file>
         <file>image/music/blue_b.png</file>
+        <file>image/music/good.png</file>
+        <file>image/music/bad.png</file>
+        <file>image/music/normal.png</file>
     </qresource>
 </RCC>

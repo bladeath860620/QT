@@ -22,19 +22,19 @@ void drum::setDrum()
     {
         case 0:
             setPixmap(QPixmap(":/music/image/music/red_s.png"));
-            setPos(960,210);
+            setPos(900,155);
             break;
         case 1:
             setPixmap(QPixmap(":/music/image/music/blue_s.png"));
-            setPos(960,210);
+            setPos(900,155);
             break;
         case 2:
             setPixmap(QPixmap(":/music/image/music/red_b.png"));
-            setPos(960,210);
+            setPos(900,155);
             break;
         case 3:
             setPixmap(QPixmap(":/music/image/music/blue_b.png"));
-            setPos(960,210);
+            setPos(900,155);
             break;
         default:
             break;
@@ -48,9 +48,9 @@ int drum::getDrum()
 
 void drum::move()
 {
-    if(x() > 290)
+    if(x() > 250)
     {
-        setPos(x() - 1, y());
+        setPos(x() - 2, y());
     }
     else
     {
