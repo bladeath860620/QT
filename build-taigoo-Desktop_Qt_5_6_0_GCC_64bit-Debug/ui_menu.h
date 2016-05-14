@@ -44,12 +44,12 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 170, 303, 81));
+        pushButton->setGeometry(QRect(80, 150, 303, 81));
         pushButton->setStyleSheet(QLatin1String("background-image: url(:/but/image/button/start.png);\n"
 "background-color: rgba(255, 255, 255, 0);"));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(40, 70, 303, 81));
+        pushButton_2->setGeometry(QRect(80, 50, 303, 81));
         pushButton_2->setStyleSheet(QLatin1String("background-image: url(:/but/image/button/start.png);\n"
 "background-color: rgba(255, 255, 255, 0);"));
         menu->setCentralWidget(centralwidget);

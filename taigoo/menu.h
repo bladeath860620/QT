@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "music1.h"
 #include "requirement.h"
+#include <QObject>
+#include <QGraphicsPixmapItem>
+
 namespace Ui {
 class menu;
 }
@@ -21,6 +24,7 @@ private slots:
     //music 1
     void on_pushButton_2_clicked();
     //project requirement
+    void selction();
 private:
     Ui::menu *ui;
     Music1 *music1;

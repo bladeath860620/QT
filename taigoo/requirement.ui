@@ -153,22 +153,6 @@
      <string>TIME LEFT:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>262</x>
-      <y>150</y>
-      <width>111</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-image: url(:/music/image/music/hitbox.png);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
@@ -243,14 +227,13 @@
    <zorder>label_2</zorder>
    <zorder>lcdNumber</zorder>
    <zorder>graphicsView</zorder>
-   <zorder>lcdNumber_2</zorder>
-   <zorder>lcdNumber_3</zorder>
-   <zorder>label_3</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
    <zorder>label_6</zorder>
    <zorder>label_7</zorder>
    <zorder>label_8</zorder>
+   <zorder>lcdNumber_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_3</zorder>
+   <zorder>lcdNumber_2</zorder>
   </widget>
  </widget>
  <resources/>

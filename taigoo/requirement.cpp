@@ -45,17 +45,17 @@ void Requirement::keyPressEvent(QKeyEvent *k)
         return;
     if((*determine)->x() < 400)
     {
-        int type = (*determine)->getDrum();
+        int color = (*determine)->getDrum();
         if(k->key()==Qt::Key_G || k->key()==Qt::Key_H)
         {
             qDebug() << "Red hit detected";
-            if(type == 0 || type == 2)
+            if(color == 0 || color == 2)
             {
                 count_score((*determine)->x());
                 delete *determine;
                 ++determine;
             }
-            else if(type == 1 || type == 3)
+            else if(color == 1 || color == 3)
             {
                 qDebug() << "Wrong color";
                 ++bad;
@@ -71,13 +71,13 @@ void Requirement::keyPressEvent(QKeyEvent *k)
         if(k->key()==Qt::Key_F || k->key()==Qt::Key_J)
         {
             qDebug() << "Blue hit detected";
-            if(type == 1 || type == 3)
+            if(color == 1 || color == 3)
             {
                 count_score((*determine)->x());
                 delete *determine;
                 ++determine;
             }
-            else if(type == 0 || type == 2)
+            else if(color == 0 || color == 2)
             {
                 qDebug() << "Wrong color";
                 ++bad;
@@ -103,10 +103,7 @@ void Requirement::setSpectral()
     int i;
     for(i=0; i < 110; ++i)
     {
-        int t = rand()%1400;
-        while(t<1000)
-            t = rand()%1400;
-        d = new drum(rand()%4, i*1000);
+        d = new drum(rand()%4, i*800);
         spectral.push_back(d);
     }
     it = spectral.begin();

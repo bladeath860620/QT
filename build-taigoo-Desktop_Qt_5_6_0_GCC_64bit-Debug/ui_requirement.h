@@ -33,7 +33,6 @@ public:
     QLCDNumber *lcdNumber_2;
     QLCDNumber *lcdNumber_3;
     QLabel *label_3;
-    QLabel *label_4;
     QLabel *label_5;
     QLabel *label_6;
     QLabel *label_7;
@@ -88,10 +87,6 @@ public:
         label_3->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/yellow.png);"));
         label_3->setFrameShape(QFrame::Box);
         label_3->setFrameShadow(QFrame::Raised);
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(262, 150, 111, 111));
-        label_4->setStyleSheet(QStringLiteral("background-image: url(:/music/image/music/hitbox.png);"));
         label_5 = new QLabel(centralwidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(0, 152, 141, 41));
@@ -115,14 +110,13 @@ public:
         label_2->raise();
         lcdNumber->raise();
         graphicsView->raise();
-        lcdNumber_2->raise();
-        lcdNumber_3->raise();
-        label_3->raise();
-        label_4->raise();
-        label_5->raise();
         label_6->raise();
         label_7->raise();
         label_8->raise();
+        lcdNumber_3->raise();
+        label_5->raise();
+        label_3->raise();
+        lcdNumber_2->raise();
 
         retranslateUi(Requirement);
 
@@ -135,7 +129,6 @@ public:
         label->setText(QString());
         label_2->setText(QString());
         label_3->setText(QApplication::translate("Requirement", "TIME LEFT:", 0));
-        label_4->setText(QString());
         label_5->setText(QApplication::translate("Requirement", "     SCORE", 0));
         label_6->setText(QString());
         label_7->setText(QString());
