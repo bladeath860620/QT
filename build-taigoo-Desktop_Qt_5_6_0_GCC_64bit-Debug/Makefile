@@ -557,6 +557,7 @@ qrc_resource.cpp: ../taigoo/resource.qrc \
 		../taigoo/image/bg/music.png \
 		../taigoo/image/bg/yellow.png \
 		../taigoo/image/bg/title.jpg \
+		../taigoo/image/bg/rule.png \
 		../taigoo/image/bg/result.jpg \
 		../taigoo/image/bg/menu.jpg \
 		../taigoo/image/music/blue_s.png \

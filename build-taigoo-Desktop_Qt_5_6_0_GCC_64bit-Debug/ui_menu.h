@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -26,6 +27,7 @@ public:
     QWidget *centralwidget;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QLabel *label;
 
     void setupUi(QMainWindow *menu)
     {
@@ -52,6 +54,10 @@ public:
         pushButton_2->setGeometry(QRect(80, 50, 303, 81));
         pushButton_2->setStyleSheet(QLatin1String("background-image: url(:/but/image/button/start.png);\n"
 "background-color: rgba(255, 255, 255, 0);"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(780, 480, 220, 256));
+        label->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/rule.png);"));
         menu->setCentralWidget(centralwidget);
 
         retranslateUi(menu);
@@ -64,6 +70,7 @@ public:
         menu->setWindowTitle(QApplication::translate("menu", "Menu", 0));
         pushButton->setText(QApplication::translate("menu", "Music 1 (Not Finished)", 0));
         pushButton_2->setText(QApplication::translate("menu", "Project Requirement", 0));
+        label->setText(QString());
     } // retranslateUi
 
 };

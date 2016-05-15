@@ -6,6 +6,7 @@
         <file>image/bg/yellow.png</file>
         <file>image/bg/result.jpg</file>
         <file>image/bg/skyblue.jpg</file>
+        <file>image/bg/rule.png</file>
     </qresource>
     <qresource prefix="/but">
         <file>image/button/start.png</file>
