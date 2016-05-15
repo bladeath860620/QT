@@ -13,6 +13,8 @@
 #include <ctime>
 #include "drum.h"
 #include "result.h"
+#include <QtMultimedia/QMediaPlayer>
+
 namespace Ui {
 class Requirement;
 }
@@ -51,6 +53,8 @@ private:
     QVector<drum*>::iterator it;
     QVector<drum*>::iterator determine;
     Result *result;
+    QMediaPlayer *rs;
+    QMediaPlayer *bs;
 };
 
 #endif // REQUIREMENT_H

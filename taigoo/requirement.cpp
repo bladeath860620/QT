@@ -12,7 +12,9 @@ Requirement::Requirement(QWidget *parent) :
     t(new QTimer),
     tempo(10),
     timer(0),
-    result(new Result)
+    result(new Result),
+    rs(new QMediaPlayer),
+    bs(new QMediaPlayer)
 {
     ui->setupUi(this);
     gif->setFileName(":/gif/image/gif/miku.gif");
@@ -26,6 +28,8 @@ Requirement::Requirement(QWidget *parent) :
     srand(time(NULL));
     gs = new QGraphicsScene(0,0,1024,291);
     ui->graphicsView->setScene(gs);
+    rs->setMedia(QUrl("qrc:/sounds/sounds/hit.wav"));
+    bs->setMedia(QUrl("qrc:/sounds/sounds/hitside.wav"));
 }
 
 Requirement::~Requirement()
@@ -43,6 +47,18 @@ void Requirement::keyPressEvent(QKeyEvent *k)
     //qDebug() << k->key();
     if(determine == spectral.end())
         return;
+    if(k->key()==Qt::Key_G || k->key()==Qt::Key_H)
+    {
+        qDebug() << "Red hit detected";
+        rs->stop();
+        rs->play();
+    }
+    if(k->key()==Qt::Key_F || k->key()==Qt::Key_J)
+    {
+        qDebug() << "Blue hit detected";
+        bs->stop();
+        bs->play();
+    }
     if((*determine)->x() < 400)
     {
         int color = (*determine)->getDrum();

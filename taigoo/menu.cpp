@@ -17,6 +17,17 @@ menu::~menu()
     delete require;
 }
 
+void menu::keyPressEvent(QKeyEvent *K)
+{
+    if(K->key() == Qt::Key_Up)
+    {
+        qDebug() << "UP";
+        /*setPixmap(QPixmap(":/others/image/button/balloon.png"));
+        setPos(900,158);
+        ui->graphicsView->show();*/
+    }
+}
+
 void menu::on_pushButton_clicked()
 {
     /*this->hide();
@@ -30,10 +41,5 @@ void menu::on_pushButton_2_clicked()
     require->setGeometry(this->x(), this->y(), 1024, 571);
     require->show();
     require->starter();
-}
-
-void menu::selction()
-{
-
 }
 

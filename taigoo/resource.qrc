@@ -24,4 +24,11 @@
         <file>image/music/bad.png</file>
         <file>image/music/normal.png</file>
     </qresource>
+    <qresource prefix="/others">
+        <file>image/button/balloon.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>sounds/hit.wav</file>
+        <file>sounds/hitside.wav</file>
+    </qresource>
 </RCC>

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -28,6 +29,7 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QLabel *label;
+    QGraphicsView *graphicsView;
 
     void setupUi(QMainWindow *menu)
     {
@@ -58,6 +60,9 @@ public:
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(780, 480, 220, 256));
         label->setStyleSheet(QStringLiteral("background-image: url(:/bg/image/bg/rule.png);"));
+        graphicsView = new QGraphicsView(centralwidget);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(0, 51, 81, 181));
         menu->setCentralWidget(centralwidget);
 
         retranslateUi(menu);

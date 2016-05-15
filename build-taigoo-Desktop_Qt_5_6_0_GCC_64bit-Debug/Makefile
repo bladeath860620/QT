@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_QML_DEBUG -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++0x -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../taigoo -I. -I../../../QT_5.6.0/5.6/gcc_64/include -I../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets -I../../../QT_5.6.0/5.6/gcc_64/include/QtGui -I../../../QT_5.6.0/5.6/gcc_64/include/QtCore -I. -I. -I../../../QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../taigoo -I. -I../../../QT_5.6.0/5.6/gcc_64/include -I../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets -I../../../QT_5.6.0/5.6/gcc_64/include/QtGui -I../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork -I../../../QT_5.6.0/5.6/gcc_64/include/QtCore -I. -I. -I../../../QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -36,7 +36,7 @@ DISTNAME      = taigoo1.0.0
 DISTDIR = /home/skywater/Desktop/PROGRAM/QT/build-taigoo-Desktop_Qt_5_6_0_GCC_64bit-Debug/.tmp/taigoo1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-z,origin -Wl,-rpath,\$$ORIGIN -Wl,-rpath,/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/lib -lQt5Multimedia -lQt5Widgets -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -368,8 +368,10 @@ Makefile: ../taigoo/taigoo.pro ../../../QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++/qm
 		../../../QT_5.6.0/5.6/gcc_64/mkspecs/features/lex.prf \
 		../taigoo/taigoo.pro \
 		../taigoo/resource.qrc \
+		../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Multimedia.prl \
 		../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Widgets.prl \
 		../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Gui.prl \
+		../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Network.prl \
 		../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Core.prl
 	$(QMAKE) -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug -o Makefile ../taigoo/taigoo.pro
 ../../../QT_5.6.0/5.6/gcc_64/mkspecs/features/spec_pre.prf:
@@ -508,8 +510,10 @@ Makefile: ../taigoo/taigoo.pro ../../../QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++/qm
 ../../../QT_5.6.0/5.6/gcc_64/mkspecs/features/lex.prf:
 ../taigoo/taigoo.pro:
 ../taigoo/resource.qrc:
+../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Multimedia.prl:
 ../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Widgets.prl:
 ../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Gui.prl:
+../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Network.prl:
 ../../../QT_5.6.0/5.6/gcc_64/lib/libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug -o Makefile ../taigoo/taigoo.pro
@@ -568,7 +572,10 @@ qrc_resource.cpp: ../taigoo/resource.qrc \
 		../taigoo/image/music/hitbox.png \
 		../taigoo/image/music/normal.png \
 		../taigoo/image/music/good.png \
+		../taigoo/sounds/hit.wav \
+		../taigoo/sounds/hitside.wav \
 		../taigoo/image/button/start.png \
+		../taigoo/image/button/balloon.png \
 		../taigoo/image/gif/miku.gif
 	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/rcc -name resource ../taigoo/resource.qrc -o qrc_resource.cpp
 
@@ -720,8 +727,25 @@ moc_mainwindow.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
 		../taigoo/mainwindow.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/mainwindow.h -o moc_mainwindow.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/mainwindow.h -o moc_mainwindow.cpp
 
 moc_menu.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -867,8 +891,25 @@ moc_menu.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
 		../taigoo/menu.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/menu.h -o moc_menu.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/menu.h -o moc_menu.cpp
 
 moc_music1.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -990,7 +1031,7 @@ moc_music1.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qjsonvalue.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qfactoryinterface.h \
 		../taigoo/music1.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/music1.h -o moc_music1.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/music1.h -o moc_music1.cpp
 
 moc_requirement.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -1134,8 +1175,24 @@ moc_requirement.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow 
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
 		../taigoo/requirement.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/requirement.h -o moc_requirement.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/requirement.h -o moc_requirement.cpp
 
 moc_drum.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QObject \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qobject.h \
@@ -1228,7 +1285,7 @@ moc_drum.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QObject \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qpixelformat.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qtransform.h \
 		../taigoo/drum.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/drum.h -o moc_drum.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/drum.h -o moc_drum.cpp
 
 moc_result.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
@@ -1336,7 +1393,7 @@ moc_result.cpp: ../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvector2d.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qtouchdevice.h \
 		../taigoo/result.h
-	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/result.h -o moc_result.cpp
+	/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/skywater/Desktop/PROGRAM/QT/taigoo -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtMultimedia -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtWidgets -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtGui -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtNetwork -I/home/skywater/Desktop/QT_5.6.0/5.6/gcc_64/include/QtCore -I. ../taigoo/result.h -o moc_result.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -1514,6 +1571,23 @@ main.o: ../taigoo/main.cpp ../taigoo/mainwindow.h \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
@@ -1667,8 +1741,24 @@ mainwindow.o: ../taigoo/mainwindow.cpp ../taigoo/mainwindow.h \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
-		ui_mainwindow.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
+		ui_mainwindow.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
@@ -1694,8 +1784,7 @@ mainwindow.o: ../taigoo/mainwindow.cpp ../taigoo/mainwindow.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../taigoo/mainwindow.cpp
 
 menu.o: ../taigoo/menu.cpp ../taigoo/menu.h \
@@ -1843,8 +1932,24 @@ menu.o: ../taigoo/menu.cpp ../taigoo/menu.h \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
-		ui_menu.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
+		ui_menu.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
@@ -2049,6 +2154,21 @@ music1.o: ../taigoo/music1.cpp ../taigoo/music1.h \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o music1.o ../taigoo/music1.cpp
 
@@ -2195,8 +2315,23 @@ requirement.o: ../taigoo/requirement.cpp ../taigoo/requirement.h \
 		../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialog \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
-		ui_requirement.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/QMediaPlayer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaplayer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qtmultimediadefs.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmultimedia.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediacontent.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaresource.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		ui_requirement.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
