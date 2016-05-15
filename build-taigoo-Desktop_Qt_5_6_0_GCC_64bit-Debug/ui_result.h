@@ -68,12 +68,12 @@ public:
         lcdNumber_3->setSegmentStyle(QLCDNumber::Flat);
         lcdNumber_4 = new QLCDNumber(Result);
         lcdNumber_4->setObjectName(QStringLiteral("lcdNumber_4"));
-        lcdNumber_4->setGeometry(QRect(450, 390, 161, 81));
+        lcdNumber_4->setGeometry(QRect(470, 390, 171, 81));
         lcdNumber_4->setFrameShape(QFrame::Box);
         lcdNumber_4->setLineWidth(5);
         label = new QLabel(Result);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(450, 330, 161, 61));
+        label->setGeometry(QRect(470, 330, 171, 61));
         label->setFrameShape(QFrame::Box);
         label->setFrameShadow(QFrame::Raised);
         label->setLineWidth(5);

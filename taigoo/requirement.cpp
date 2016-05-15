@@ -10,7 +10,7 @@ Requirement::Requirement(QWidget *parent) :
     ui(new Ui::Requirement),
     gif(new QMovie),
     t(new QTimer),
-    tempo(10),
+    tempo(4),
     timer(0),
     result(new Result),
     rs(new QMediaPlayer),
@@ -75,7 +75,7 @@ void Requirement::keyPressEvent(QKeyEvent *k)
             {
                 qDebug() << "Wrong color";
                 ++bad;
-                --score;
+                score -= 300;
                 ui->label_6->hide();
                 ui->label_7->hide();
                 ui->label_8->show();
@@ -97,7 +97,7 @@ void Requirement::keyPressEvent(QKeyEvent *k)
             {
                 qDebug() << "Wrong color";
                 ++bad;
-                --score;
+                score -= 300;
                 ui->label_6->hide();
                 ui->label_7->hide();
                 ui->label_8->show();
@@ -117,9 +117,9 @@ void Requirement::keyPressEvent(QKeyEvent *k)
 void Requirement::setSpectral()
 {
     int i;
-    for(i=0; i < 110; ++i)
+    for(i=0; i < 30; ++i)
     {
-        d = new drum(rand()%4, i*800);
+        d = new drum(rand()%4, i*900);
         spectral.push_back(d);
     }
     it = spectral.begin();
@@ -133,7 +133,7 @@ void Requirement::count_score(int location)
     if(mis < 10)
     {
         qDebug() << "Right";
-        score += 2;
+        score += 400;
         ++good;
         ui->label_7->hide();
         ui->label_8->hide();
@@ -142,7 +142,7 @@ void Requirement::count_score(int location)
     else if(mis>=10 && mis <50)
     {
         qDebug() << "Not quite right";
-        ++score;
+        score += 200;
         ++normal;
         ui->label_6->hide();
         ui->label_8->hide();
@@ -151,7 +151,7 @@ void Requirement::count_score(int location)
     else
     {
         qDebug() << "Missed";
-        --score;
+        score -= 300;
         ++bad;
         ui->label_6->hide();
         ui->label_7->hide();

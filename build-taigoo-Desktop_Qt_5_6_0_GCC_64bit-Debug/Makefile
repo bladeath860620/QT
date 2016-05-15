@@ -1758,33 +1758,7 @@ mainwindow.o: ../taigoo/mainwindow.cpp ../taigoo/mainwindow.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
-		ui_mainwindow.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../taigoo/mainwindow.cpp
 
 menu.o: ../taigoo/menu.cpp ../taigoo/menu.h \
@@ -1949,36 +1923,7 @@ menu.o: ../taigoo/menu.cpp ../taigoo/menu.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug \
-		ui_menu.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QPushButton \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget
+		ui_menu.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menu.o ../taigoo/menu.cpp
 
 music1.o: ../taigoo/music1.cpp ../taigoo/music1.h \
@@ -2102,37 +2047,6 @@ music1.o: ../taigoo/music1.cpp ../taigoo/music1.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qjsonvalue.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qfactoryinterface.h \
 		ui_music1.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget \
 		../taigoo/menu.h \
 		../taigoo/requirement.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QGraphicsScene \
@@ -2143,9 +2057,13 @@ music1.o: ../taigoo/music1.cpp ../taigoo/music1.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qpainter.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qtextoption.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QTimer \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qtimer.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qbasictimer.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVector \
 		../taigoo/drum.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QObject \
@@ -2165,6 +2083,7 @@ music1.o: ../taigoo/music1.cpp ../taigoo/music1.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QString \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qmediaenumdebug.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
@@ -2332,34 +2251,6 @@ requirement.o: ../taigoo/requirement.cpp ../taigoo/requirement.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtMultimedia/qaudio.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
 		ui_requirement.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLCDNumber \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlcdnumber.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o requirement.o ../taigoo/requirement.cpp
 
@@ -2562,45 +2453,7 @@ result.o: ../taigoo/result.cpp ../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qfiledevice.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvector2d.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_result.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/QVariant \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qicon.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qeventloop.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialogButtonBox \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabbar.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLCDNumber \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlcdnumber.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h
+		ui_result.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o result.o ../taigoo/result.cpp
 
 qrc_resource.o: qrc_resource.cpp 
