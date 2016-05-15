@@ -155,9 +155,9 @@ void Requirement::starter()
 void Requirement::timing()
 {
     timer += tempo;
-    /*if(timer <= 10000)
+    /*if(timer <= 3000)
     {
-        ui->lcdNumber_2->display(10-(timer/1000));
+        ui->lcdNumber_2->display(3-(timer/1000));
         if(it != spectral.end())
         {
             if(timer >= (*it)->getStartTime())
@@ -207,7 +207,7 @@ void Requirement::show_result()
     result->showBad(bad);
     if(result->exec())
     {
-        qDebug() << result->exec();
+        this->show();
         timer = 0;
         score = 0;
         good = 0;
@@ -217,8 +217,8 @@ void Requirement::show_result()
         ui->label_6->hide();
         ui->label_7->hide();
         ui->label_8->hide();
-        this->show();
         starter();
+        result->close();
     }
 }
 
