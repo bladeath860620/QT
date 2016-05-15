@@ -207,6 +207,7 @@ void Requirement::show_result()
     result->showBad(bad);
     if(result->exec())
     {
+        qDebug() << result->exec();
         timer = 0;
         score = 0;
         good = 0;

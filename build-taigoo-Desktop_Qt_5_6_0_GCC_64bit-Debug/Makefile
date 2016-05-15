@@ -2441,6 +2441,8 @@ result.o: ../taigoo/result.cpp ../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qbuttongroup.h \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QDialogButtonBox \
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QHeaderView \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -2462,13 +2464,7 @@ result.o: ../taigoo/result.cpp ../taigoo/result.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLCDNumber \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QMainWindow \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qmainwindow.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QPushButton \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/QWidget
+		../../../QT_5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o result.o ../taigoo/result.cpp
 
 qrc_resource.o: qrc_resource.cpp 
